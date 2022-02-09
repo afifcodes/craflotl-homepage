@@ -9,7 +9,7 @@ module.exports = {
     extend: {
       fontFamily: {
         inter: ["Inter", "sans-serif"],
-        mplus: ["MPlus", "sans-serif"],
+        eudoxus: ["EudoxusSans", "sans-serif"],
       },
     },
   },

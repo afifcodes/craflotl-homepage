@@ -27,19 +27,19 @@
 }
 
 @font-face {
-  font-family: "MPlus";
-  font-weight: 400;
-  src: url("/fonts/MPlus/MPlus-Regular.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "MPlus";
+  font-family: "EudoxusSans";
   font-weight: 500;
-  src: url("/fonts/MPlus/MPlus-Medium.woff2") format("woff2");
+  src: url("/fonts/Eudoxus/EudoxusSans-Medium.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: "MPlus";
+  font-family: "EudoxusSans";
   font-weight: 700;
-  src: url("/fonts/MPlus/MPlus-Bold.woff2") format("woff2");
+  src: url("/fonts/Eudoxus/EudoxusSans-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "EudoxusSans";
+  font-weight: 800;
+  src: url("/fonts/Eudoxus/EudoxusSans-ExtraBold.woff2") format("woff2");
 }
