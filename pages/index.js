@@ -48,7 +48,7 @@ export default function Home() {
       <br />
       <SpanLabel>Find me online</SpanLabel>
       <br />
-      <div className="mt-4 ml-8 text-blue-600 dark:text-amber-100 font-semibold">
+      <div className="mt-4 sm:ml-8 flex items-center justify-center flex-wrap gap-4 sm:block text-blue-600 dark:text-amber-100 font-semibold">
         <div className="flex items-center gap-2 mb-4">
           <Instagram className="h-5 w-5" />
           <a
