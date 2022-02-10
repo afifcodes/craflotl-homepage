@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+}
+::-webkit-scrollbar {
+  width: 0px;
+}
+
 @font-face {
   font-family: "Inter";
   font-weight: 400;
@@ -42,4 +50,10 @@
   font-family: "EudoxusSans";
   font-weight: 800;
   src: url("/fonts/Eudoxus/EudoxusSans-ExtraBold.woff2") format("woff2");
+}
+
+* {
+  transition: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 50ms;
 }
