@@ -95,7 +95,7 @@ export default function Navbar() {
             </AnimatePresence>
           </div>
         </div>
-        <div className="relative">
+        <div className="relative sm:hidden">
           <div className="flex items-center justify-end gap-2">
             <div className="relative h-10 w-10">
               <AnimatePresence>
