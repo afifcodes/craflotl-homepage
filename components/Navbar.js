@@ -1,9 +1,11 @@
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { Menu, Moon, Sun } from "react-feather";
 import useTheme from "../lib/useTheme";
 
 export default function Navbar() {
+  const router = useRouter();
   const [theme, toggleDarkMode] = useTheme();
 
   return (
@@ -16,17 +18,35 @@ export default function Navbar() {
         </Link>
         <div className="flex items-center justify-end gap-4 text-sm font-medium">
           <Link href="/works" scroll={false}>
-            <a className="px-2 py-1 rounded bg-blue-100 dark:bg-amber-100 text-blue-600 dark:text-[#202023]">
+            <a
+              className={`px-2 py-1 rounded ${
+                router.pathname.includes("works")
+                  ? "bg-blue-100 dark:bg-amber-100 text-blue-600 dark:text-[#202023]"
+                  : "hover:bg-blue-100 dark:hover:bg-amber-100 dark:hover:text-[#202023] transition-all duration-300"
+              }`}
+            >
               Works
             </a>
           </Link>
           <Link href="/posts" scroll={false}>
-            <a className="px-2 py-1 rounded hover:bg-blue-100 dark:hover:bg-amber-100 dark:hover:text-[#202023] transition-all duration-300">
+            <a
+              className={`px-2 py-1 rounded ${
+                router.pathname.includes("posts")
+                  ? "bg-blue-100 dark:bg-amber-100 text-blue-600 dark:text-[#202023]"
+                  : "hover:bg-blue-100 dark:hover:bg-amber-100 dark:hover:text-[#202023] transition-all duration-300"
+              }`}
+            >
               Posts
             </a>
           </Link>
           <Link href="/source" scroll={false}>
-            <a className="px-2 py-1 rounded hover:bg-blue-100 dark:hover:bg-amber-100 dark:hover:text-[#202023] transition-all duration-300">
+            <a
+              className={`px-2 py-1 rounded ${
+                router.pathname.includes("source")
+                  ? "bg-blue-100 dark:bg-amber-100 text-blue-600 dark:text-[#202023]"
+                  : "hover:bg-blue-100 dark:hover:bg-amber-100 dark:hover:text-[#202023] transition-all duration-300"
+              }`}
+            >
               Source
             </a>
           </Link>
