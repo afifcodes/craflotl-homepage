@@ -22,7 +22,7 @@ export default function Home() {
       <br />
       <div className="flex items-center justify-center">
         <Link href="/portfolio">
-          <a className="border-2 border-blue-600 px-4 py-2 rounded-md bg-blue-50 text-blue-600 text-center flex items-center justify-center transition-all gap-2 hover:gap-4">
+          <a className="font-medium border-2 border-blue-600 dark:border-amber-100 px-4 py-2 rounded-md bg-blue-50 dark:bg-amber-100 text-blue-600 dark:text-[#202023] text-center flex items-center justify-center transition-all gap-2 hover:gap-4">
             <span>Portfolio</span>
             <ArrowRight className="h-4 w-4" />
           </a>
@@ -48,14 +48,26 @@ export default function Home() {
       <br />
       <SpanLabel>Find me online</SpanLabel>
       <br />
-      <div className="mt-4 ml-8 text-blue-600 font-semibold">
+      <div className="mt-4 ml-8 text-blue-600 dark:text-amber-100 font-semibold">
         <div className="flex items-center gap-2 mb-4">
           <Instagram className="h-5 w-5" />
-          <a href="https://instagram.com/craflotl">@craflotl</a>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://instagram.com/craflotl"
+          >
+            @craflotl
+          </a>
         </div>
         <div className="flex items-center gap-2 mb-4">
           <GitHub className="h-5 w-5" />
-          <a href="https://instagram.com/craflotl">@craflotl</a>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://github.com/craflotl"
+          >
+            @craflotl
+          </a>
         </div>
       </div>
       <br />
