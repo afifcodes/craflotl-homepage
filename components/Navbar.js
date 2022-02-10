@@ -51,8 +51,8 @@ export default function Navbar() {
             </a>
           </Link>
           <div className="relative h-10">
-            <AnimatePresence>
-              {theme === "light" && (
+            {theme === "light" ? (
+              <AnimatePresence>
                 <motion.button
                   initial="initial"
                   animate="animate"
@@ -67,10 +67,9 @@ export default function Navbar() {
                 >
                   <Moon className="h-5 w-5 text-neutral-200" />
                 </motion.button>
-              )}
-            </AnimatePresence>
-            <AnimatePresence>
-              {theme === "dark" && (
+              </AnimatePresence>
+            ) : (
+              <AnimatePresence>
                 <motion.button
                   initial="initial"
                   animate="animate"
@@ -85,8 +84,8 @@ export default function Navbar() {
                 >
                   <Sun className="h-5 w-5 text-[#202023]" />
                 </motion.button>
-              )}
-            </AnimatePresence>
+              </AnimatePresence>
+            )}
           </div>
         </div>
         <button className="sm:hidden rounded-md w-10 h-10 outline-none flex items-center justify-center bg-white">
