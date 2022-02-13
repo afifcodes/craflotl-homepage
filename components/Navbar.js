@@ -1,4 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
@@ -17,11 +18,30 @@ export default function Navbar() {
   return (
     <div className="fixed top-0 w-full bg-opacity-50 border-b dark:border-b-neutral-800 backdrop-blur-md">
       <div className="max-w-3xl m-auto flex items-center justify-between px-4 sm:px-8 py-2">
-        <Link href="/">
-          <a className="font-eudoxus font-bold text-lg tracking-tight">
-            Afifudin Abdullah
-          </a>
-        </Link>
+        <div className="flex items-center gap-2 group">
+          <div className="relative h-10 w-10 group-hover:-rotate-6 transition-all">
+            {theme === "light" ? (
+              <Image
+                src="/icon_dark.png"
+                layout="fill"
+                className="object-contain"
+                alt="icon_dark"
+              />
+            ) : (
+              <Image
+                src="/icon_light.png"
+                layout="fill"
+                className="object-contain"
+                alt="icon_dark"
+              />
+            )}
+          </div>
+          <Link href="/">
+            <a className="font-eudoxus font-bold text-lg tracking-tight">
+              Afifudin Abdullah
+            </a>
+          </Link>
+        </div>
         <div className="hidden sm:flex items-center justify-end gap-4 text-sm font-medium">
           <Link href="/works" scroll={false}>
             <a
